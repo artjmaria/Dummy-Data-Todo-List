@@ -5,18 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+
     <title>Dummy Data To-Do List</title>
 </head>
 
 <body>
 
-    <button onclick="fetchTodos()">Fetch Todos</button>
-    <button onclick="logTodos()">Log Todos</button>
-    <button onclick="populateTodos()">Populate Todos</button>
+    <div class='button-container'>
+        <button onclick="fetchTodos()">Fetch To-Do's</button>
+        <button onclick="logTodos()">Log To-Do's</button>
+        <button onclick="populateTodos()">Populate To-Do's</button>
+
+
+        <label for="pickId">Pick a number to filter by userID:</label>
+        <select name="dropdown" id="dropdown">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button onclick="filterTodos()">Filter To-Do's</button>
+        <button onclick="clearTodos()">Clear To-Do's</button>
+        <button onclick="completeTodos()">Complete To-Do's</button>
+        <button onclick="incompleteTodos()">Incomplete To-Do's</button>
+    </div>
+
+
     <ol id="todo-list">
         <!-- LIs will go here -->
     </ol>
+
+
+
+    <script src="./scripts.js"></script>
 
 </body>
 
